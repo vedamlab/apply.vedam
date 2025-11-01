@@ -1,123 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1440, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>Vedam School of Technology</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="header">
-    <div class="header-content">
-      <div class="logo">
-        <!-- <img src="assets/VedamLogo.png" alt="Vedam Logo" height="40"/> -->
-        <img src="assets/logoNew.png" alt="Vedam Logo" height="70"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vedam School of Technology</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <!-- <img src="assets/VedamLogo.png" alt="Vedam Logo" height="40"/> -->
+          <img src="assets/logoNew.png" alt="Vedam Logo" height="70" />
+        </div>
+        <button class="login-btn">Login</button>
       </div>
-      <button class="login-btn">Login</button>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="hero-heading-block">
-          <h1>
-            <span class="h1-orange">Learn Tech by</span><br>
-            <span class="h1-purple">Building It </span>
-          </h1>
-          <div class="hero-subdesc">
-            <span class="program">4 Year Undergraduate Program in CS & AI</span> <br>
-              <span class="subhead">B.Tech degree by UGC approved University</span>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-heading-block">
+            <h1>
+              <span class="h1-orange">Learn Tech by</span><br />
+              <span class="h1-purple">Building It </span>
+            </h1>
+            <div class="hero-subdesc">
+              <span class="program"
+                >4 Year Undergraduate Program in CS & AI</span
+              >
+              <br />
+              <span class="subhead"
+                >B.Tech degree by UGC approved University</span
+              >
+            </div>
+          </div>
+          <div class="info-cards">
+            <!-- Eligibility Card -->
+            <div class="info-card info-card-purple">
+              <div class="info-card-top-icon">
+                <img src="assets/Eligibility.png" alt="Eligibility" />
+              </div>
+              <div class="info-title">Eligibility</div>
+              <div class="info-card-divider"></div>
+              <div class="info-detail">
+                2025, 2026 12th students with PCM (&gt;50% in PCM & 12th boards
+                Overall)
+              </div>
+              <button class="info-card-btn">
+                <img src="assets/tick.png" alt="Tick" />
+              </button>
+            </div>
+            <!-- Exam Date Card -->
+            <div class="info-card info-card-orange">
+              <div class="info-card-top-icon">
+                <img src="assets/Examdate.png" alt="Exam Date" />
+              </div>
+              <div class="info-title">Exam Date</div>
+              <div class="info-card-divider info-card-divider-orange"></div>
+              <div class="info-detail">31st July 2026</div>
+              <button class="info-card-btn info-card-btn-orange">
+                <img src="assets/calender.png" alt="Calender" />
+              </button>
+            </div>
+            <!-- Mode of Exam Card -->
+            <div class="info-card info-card-purple">
+              <div class="info-card-top-icon" style="width: 20%">
+                <img src="assets/laptop.png" alt="Mode of Exam" />
+              </div>
+              <div class="info-title">Mode of Exam</div>
+              <div class="info-card-divider"></div>
+              <div class="info-detail">
+                Online Exam<br />Only Laptop/PC allowed
+              </div>
+              <button class="info-card-btn">
+                <img src="assets/pencil.png" alt="Pencil" />
+              </button>
+            </div>
           </div>
         </div>
-        <div class="info-cards">
-          <!-- Eligibility Card -->
-          <div class="info-card info-card-purple">
-            <div class="info-card-top-icon">
-              <img src="assets/Eligibility.png" alt="Eligibility" />
-            </div>
-            <div class="info-title">Eligibility</div>
-            <div class="info-card-divider"></div>
-            <div class="info-detail">
-              2025, 2026 12th students with PCM (&gt;50% in PCM & 12th boards Overall)
-            </div>
-            <button class="info-card-btn"><img src="assets/tick.png" alt="Tick" /></button>
+        <div class="registration-form-card">
+          <div class="top-alert">
+            Registrations end <span class="alert-date">12 March 2026</span> !
           </div>
-          <!-- Exam Date Card -->
-          <div class="info-card info-card-orange">
-            <div class="info-card-top-icon">
-              <img src="assets/Examdate.png" alt="Exam Date" />
+
+          <h2>Register Now</h2>
+          <p class="sub-text">Fill in your details below</p>
+
+          <form id="registration-form">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Type"
+              required
+            />
+
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Type"
+              required
+            />
+
+            <label>Contact Details</label>
+            <div class="phone-fields">
+              <select name="country-code" id="country-code">
+                <option value="91">+91</option>
+              </select>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Mobile Number"
+                required
+              />
             </div>
-            <div class="info-title">Exam Date</div>
-            <div class="info-card-divider info-card-divider-orange"></div>
-            <div class="info-detail">31st July 2026</div>
-            <button class="info-card-btn info-card-btn-orange"><img src="assets/calender.png" alt="Calender" /></button>
-          </div>
-          <!-- Mode of Exam Card -->
-          <div class="info-card info-card-purple">
-            <div class="info-card-top-icon " style="width: 20%;">
-              <img   src="assets/laptop.png" alt="Mode of Exam" />
-            </div>
-            <div class="info-title">Mode of Exam</div>
-            <div class="info-card-divider"></div>
-            <div class="info-detail">Online Exam<br/>Only Laptop/PC allowed</div>
-            <button class="info-card-btn"><img src="assets/pencil.png" alt="Pencil" /></button>
-          </div>
+
+            <label for="passing-year">Year of Passing Class 12th</label>
+            <select id="passing-year" name="passing-year">
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+
+            <label for="stream">Class 12th Stream</label>
+            <select id="stream" name="stream">
+              <option value="PCM">PCM</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label for="source">Where did you get to know about Vedam?</label>
+            <select id="source" name="source">
+              <option value="Friends & Family">Friends & Family</option>
+              <option value="Online">Online</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <button type="submit" class="get-started-btn">Get Started ✓</button>
+          </form>
         </div>
-      </div>
-      <div class="registration-form-card">
-  <div class="top-alert">
-    Registrations end <span class="alert-date">12 March 2026</span> !
-  </div>
-
-  <h2>Register Now</h2>
-  <p class="sub-text">Fill in your details below</p>
-
-  <form id="registration-form">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Type" required />
-
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="Type" required />
-
-    <label>Contact Details</label>
-    <div class="phone-fields">
-      <select name="country-code" id="country-code">
-        <option value="91">+91</option>
-      </select>
-      <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required />
-    </div>
-
-    <label for="passing-year">Year of Passing Class 12th</label>
-    <select id="passing-year" name="passing-year">
-      <option value="2025">2025</option>
-      <option value="2026">2026</option>
-    </select>
-
-    <label for="stream">Class 12th Stream</label>
-    <select id="stream" name="stream">
-      <option value="PCM">PCM</option>
-      <option value="Other">Other</option>
-    </select>
-
-    <label for="source">Where did you get to know about Vedam?</label>
-    <select id="source" name="source">
-      <option value="Friends & Family">Friends & Family</option>
-      <option value="Online">Online</option>
-      <option value="Other">Other</option>
-    </select>
-
-    <button type="submit" class="get-started-btn">Get Started ✓</button>
-  </form>
-</div>
-
-    </section>
-<div class="intake-dates-bar">July 2026 Intake Dates</div>
-     <section class="intake-dates-section">
-        
+      </section>
+      <div class="intake-dates-bar">July 2026 Intake Dates</div>
+      <section class="intake-dates-section">
         <div class="intake-steps">
           <div class="intake-step">
             <img
@@ -171,8 +204,8 @@
             />
             <div class="step-content">
               <span class="step-title">Final Offer</span
-              ><span style="line-height: 1.4;" class="step-detail"
-                >Within 15 days of exam <br>(If Selected)</span
+              ><span style="line-height: 1.4" class="step-detail"
+                >Within 15 days of exam <br />(If Selected)</span
               >
             </div>
           </div>
@@ -301,15 +334,14 @@
 
       <div class="apply-now-section">
         <div class="apply-img">
-        <img
-          class="apply-now-image"
-          src="assets/apply now.png"
-          alt="Apply Now"
-        />
-        <button class="apply-btn" >Apply Now</button>
+          <img
+            class="apply-now-image"
+            src="assets/apply now.png"
+            alt="Apply Now"
+          />
+          <button class="apply-btn">Apply Now</button>
         </div>
       </div>
-      
     </main>
 
     <footer class="site-footer">
