@@ -800,7 +800,7 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
 /* Campus Section */
 /* Campus — reduced gap between heading and images */
 .campus-section {
-  margin-top: 12px;     /* overall spacing above the whole section */
+   /* overall spacing above the whole section */
   padding: 0 5%;
 }
 
@@ -1080,25 +1080,48 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
 }
 
 /* Apply Now Section */
-.apply-now-section { 
-  margin-top: 56px; 
-  width: 100%; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+.apply-now-section {
+  
+  margin-top: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.apply-img{
+  /* background-color: white; */
+  border-radius: 38px;
+  overflow: hidden;
+  position: relative;
+
 }
 
-.apply-now-image { 
-  width: 100%; 
-  height: auto; 
-  border-radius: 16px; 
-  box-shadow: 0 8px 28px rgba(0,0,0,0.10); 
-  transition: transform 0.3s ease;
+.apply-now-image {
+  width: 100%;
+  height: 100%;
+  /* transition: transform 0.3s ease; */
 }
-
+.apply-btn{
+  position: absolute;
+  top: 153px;   /* where you want */
+  left: 50px;  /* where you want */
+   
+  z-index: 10;
+  padding: 21px 61px;
+  background: linear-gradient(90deg, #7B2CBF 0%, #F25C05 100%);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  
+  cursor: pointer;
+}
 .apply-now-image:hover {
-  transform: translateY(-5px);
+  transform: translateY(0px);
 }
+
 
 /* Footer Styles */
 .site-footer {
