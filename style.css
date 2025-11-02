@@ -7,7 +7,7 @@ html, body {
 
 body {
   min-height: 100vh;
- ;
+
   color: #39324A;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -27,7 +27,7 @@ body {
 }
 
 .header-content {
-  width: 1200px;
+  width: 1300px;
   min-height: 80px;
   display: flex;
   justify-content: space-between;
@@ -167,8 +167,6 @@ main {
 /* Info Cards */
 .info-cards { 
   width: 100%; 
-  height: 384px; 
-  margin-left: 0; 
   display: flex; 
   gap: 28px; 
   align-items: stretch; 
@@ -185,10 +183,9 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 42px 20px 18px 20px;
+  padding: 42px 20px 30px 20px;
   min-width: 190px;
-  min-height: 358px;
-  height: calc(100% - 24px);
+  height: 520px; /* ✅ force taller cards */
   justify-content: flex-start;
   overflow: visible;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -201,6 +198,7 @@ main {
 
 .info-card-orange {
   background: linear-gradient(0deg, #FFD6A3 0%, #FFE9CF 45%, #FFFFFF 100%);
+  
 }
 
 .info-card-top-icon {
@@ -337,11 +335,12 @@ background: radial-gradient(circle, rgba(255,138,0,0.6) 0%, rgba(255,138,0,0.1) 
 /* === Registration Form - Exact Figma Match === */
 .registration-form-card {
   margin-top: 20px;
+
   width: 476px;
   background: #fff;
   border-radius: 26px;
   box-shadow: 0 0 32px rgba(198, 86, 237, 0.14);
-  padding: 0px 36px 10px 36px;
+  padding: 0px 36px 0 36px;
   position: relative;
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
@@ -375,7 +374,7 @@ background: radial-gradient(circle, rgba(255,138,0,0.6) 0%, rgba(255,138,0,0.1) 
 
 /* === Heading === */
 .registration-form-card h2 {
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   color: #8A18FF;
   font-weight: 800;
   margin-bottom: 5px;
@@ -384,14 +383,14 @@ background: radial-gradient(circle, rgba(255,138,0,0.6) 0%, rgba(255,138,0,0.1) 
 .sub-text {
   font-size: 0.95rem;
   color: #6C667A;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 /* === Form === */
 #registration-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 #registration-form label {
@@ -1094,6 +1093,7 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
   border-radius: 38px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
 
 }
 
@@ -1124,45 +1124,142 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
 
 
 /* Footer Styles */
+.youtube-section {
+  margin-top: 56px;
+}
+
+.youtube-heading {
+  margin: 0 0 18px 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #f97d03 0%, #8a18ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.youtube-container {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.youtube-link {
+  flex: 0 0 calc((100% - 24px) / 2);
+  text-decoration: none;
+  display: block;
+}
+
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.youtube-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.youtube-wrapper:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Apply Now Section */
+.apply-now-section {
+  
+  margin-top: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.apply-img{
+  /* background-color: white; */
+  border-radius: 38px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.apply-now-image {
+  width: 100%;
+  height: 100%;
+  /* transition: transform 0.3s ease; */
+}
+.apply-btn{
+  position: absolute;
+  top: 153px;   /* where you want */
+  left: 50px;  /* where you want */
+   
+  z-index: 10;
+  padding: 21px 61px;
+  background: linear-gradient(90deg, #7B2CBF 0%, #F25C05 100%);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  
+  cursor: pointer;
+}
+.apply-now-image:hover {
+  transform: translateY(0px);
+}
+
+/* Footer Styles */
 .site-footer {
-  background: linear-gradient(90deg, #2B135C 0%, #8A18FF 25%, #F97D03 100%);
+  background: linear-gradient(90deg, #7B2CBF 0%, #F25C05 100%);
   color: #fff;
-  padding: 60px 120px 30px 120px;
+  padding: 30px 120px 30px 110px;
   margin-top: 56px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
+  
 }
 
 .footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   min-width: 200px;
-}
-
-.footer-logo .logo {
-  font-size: 2.5rem;
-  font-weight: 800;
-  font-family: 'Inter', Arial, sans-serif;
-  letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-
-.footer-logo .tagline {
-  font-size: 1rem;
-  font-weight: 400;
-  opacity: 0.95;
+  margin: 0 auto;
 }
 
 .footer-title {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 16px;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .footer-links {
@@ -1208,35 +1305,44 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
   font-size: 0.9rem;
   opacity: 0.9;
 }
+.footer-logoo{
+    margin-right: 40px;
+  }
 
 /* Responsive Styles */
+@media (max-width: 1400px){
+  .apply-now-section {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
-  .header-content, main {
+  .header-content,
+  main {
     max-width: 100%;
     padding: 0 20px;
   }
-  
+
   .hero-heading-block {
     width: 100%;
     margin-top: 80px;
   }
-  
+
   .hero-heading-block h1 {
     width: 100%;
     font-size: 54px;
   }
-  
+
   .campus-container {
     flex-wrap: wrap;
     justify-content: center;
     min-height: auto;
   }
-  
+
   .campus-card {
     flex: 1 1 300px;
     margin-bottom: 40px;
   }
-  
+
   .campus-caption {
     width: 70%;
     height: auto;
@@ -1244,14 +1350,18 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
     bottom: -20px;
     font-size: 18px;
   }
-  
+
   .site-footer {
-    padding: 50px 40px 25px 40px;
+    padding: 25px 40px 25px 40px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
   }
   
-  .footer-content {
-    gap: 30px;
-  }
 }
 
 @media (max-width: 1070px) {
@@ -1259,24 +1369,24 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .registration-form-card {
     width: 100%;
     max-width: 476px;
     height: auto;
     margin: 24px auto 0 auto;
   }
-  
+
   main {
     padding: 0 18px;
   }
-  
+
   .intake-dates-bar {
     width: 100%;
     padding: 15px 0;
     margin-left: 0;
   }
-  
+
   .intake-steps {
     margin-left: 0;
     gap: 14px;
@@ -1284,13 +1394,13 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
     max-width: 100%;
     justify-content: center;
   }
-  
+
   .intake-step {
     width: 100%;
     height: auto;
     min-height: 132px;
   }
-  
+
   .step-badge {
     left: auto;
     right: 12px;
@@ -1307,7 +1417,7 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
     margin-top: 36px;
     min-height: 120px;
   }
-  
+
   .hero-heading-block h1 {
     width: 92vw;
     font-size: 8vw;
@@ -1319,7 +1429,7 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
   .header {
     padding: 13px 6px;
   }
-  
+
   .info-cards {
     width: 99vw;
     min-width: 0;
@@ -1328,105 +1438,158 @@ background: linear-gradient(90deg, #ffffff 0%, #2B135C 100%);
     margin-left: 0;
     gap: 16px;
   }
-  
+
   .info-card {
     min-height: 200px;
     margin-bottom: 28px;
     padding: 38px 6vw 18px 6vw;
   }
-  
+
   .info-card-top-icon {
     width: 46px;
     height: 46px;
     top: -22px;
   }
-  
+
   .info-card-top-icon img {
     width: 24px;
     height: 24px;
   }
-  
+
   .info-card-btn {
     width: 34px;
     height: 24px;
   }
-  
+
   .info-card-btn img {
     width: 14px;
     height: 14px;
   }
-  
+
   .intake-steps {
     margin-left: 0;
     gap: 14px;
     grid-template-columns: 1fr;
   }
-  
+
   .intake-step {
     width: 100%;
     height: auto;
     min-height: 132px;
   }
-  
-  .campus-heading, .seniors-heading {
+
+  .campus-heading,
+  .seniors-heading {
     width: 100%;
     text-align: center;
   }
-  
+
   .seniors-container {
     flex-direction: column;
   }
-  
+
   .seniors-image {
     width: 100%;
   }
-  
+
   .approach-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .youtube-container {
     flex-direction: column;
   }
-  
+
   .youtube-link {
     width: 100%;
   }
-  
+
   .apply-now-section {
     margin-top: 40px;
   }
-  
+
   .apply-now-image {
     width: 100%;
   }
-  
+
   .site-footer {
-    padding: 40px 18px 20px 18px;
-    margin-top: 40px;
-  }
-  
-  .footer-content {
+  padding: 40px 18px 20px 18px;
+  margin-top: 40px;
+  background-color: #000; /* optional */
+  color: #fff;
+}
+
+.site-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.site-footer .footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.site-footer .contact-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-footer .footer-logoo {
+  margin: 0 auto;
+}
+
+.site-footer .footer-divider {
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin: 20px 0;
+}
+
+.site-footer .footer-copyright {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+}
+/* ✅ Mobile view — only affects footer */
+@media (max-width: 768px) {
+  .site-footer .footer-content {
     flex-direction: column;
-    gap: 28px;
+    align-items: center;
+    text-align: center;
   }
-  
-  .footer-section {
+
+  .site-footer .footer-section {
     min-width: 100%;
+  }
+
+  .site-footer .contact-cont {
+    align-items: center;
+  }
+
+  .site-footer .footer-links {
+    padding: 0;
+  }
+
+  .site-footer .footer-links li {
+    list-style: none;
+    margin: 4px 0;
+  }
+
+  .site-footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .site-footer .footer-logoo {
+    margin-bottom: 20px;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 1.55rem;
-  }
-  
-  .registration-form-card, .info-card, .intake-step {
-    padding: 8px;
-  }
-  
-  .campus-caption {
-    width: 90%;
-    font-size: 16px;
-  }
+.site-footer .footer-cont {
+  padding-left: 30px;
 }
